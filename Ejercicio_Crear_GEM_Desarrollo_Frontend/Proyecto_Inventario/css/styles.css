@@ -1,0 +1,157 @@
+
+/* CSS Variables para mantener consistencia corporativa */
+:root {
+    --primary-dark: #1a2a3a;
+    --accent-blue: #3498db;
+    --bg-gray: #f4f7f6;
+    --text-main: #333;
+    --danger-red: #e74c3c;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-main);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#globalSearch {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+#globalSearch:focus {
+    border-color: var(--accent-blue);
+}
+
+/* Table Container */
+.inventory-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: var(--primary-dark);
+    color: #fff;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Serial Number Specific Style */
+.serial-col {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    min-width: 140px;
+    color: #555;
+}
+
+/* Location Editable Style */
+.editable-location {
+    background-color: #fcfcfc;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.editable-location:focus {
+    background-color: #fff;
+    outline: 2px solid var(--accent-blue);
+    border-style: solid;
+}
+
+/* Stock Warning */
+.low-stock {
+    color: var(--danger-red);
+    font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN: Table to Cards */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--primary-dark);
+    }
+
+    .serial-col {
+        text-align: right;
+    }
+}
