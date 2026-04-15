@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Profesional - Alejandro Ruiz</title>
+    
+    <!-- Fuentes e Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel ="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="edit-hint">Modo Edición Activo: Haz clic en cualquier texto para cambiarlo</div>
+
+<div class="app-wrapper" id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="profile-section">
+            <div class="img-box" onclick="changeImage()">
+                <img id="profile-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300" alt="Alejandro Ruiz">
+                <div class="img-overlay">Cambiar imagen (URL)</div>
+            </div>
+            <h1 contenteditable="false">Alejandro Ruiz</h1>
+            <div class="job-title" contenteditable="false">Frontend Developer | UX Specialist</div>
+        </div>
+
+        <!-- Contacto -->
+        <div class="sidebar-group">
+            <h2 class="sidebar-label"><i data-lucide="info" size="16"></i> CONTACTO</h2>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i data-lucide="mail" size="18"></i>
+                    <span contenteditable="false">hola@alejandroruiz.dev</span>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="phone" size="18"></i>
+                    <span contenteditable="false">+34 600 000 000</span>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="map-pin" size="18"></i>
+                    <span contenteditable="false">Madrid, España</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competencias -->
+        <div class="sidebar-group">
+            <h2 class="sidebar-label"><i data-lucide="zap" size="16"></i> COMPETENCIAS</h2>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span contenteditable="false">React & Next.js</span>
+                    <span class="skill-val">95%</span>
+                </div>
+                <div class="progress-bar" onclick="editSkill(this)">
+                    <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span contenteditable="false">TypeScript</span>
+                    <span class="skill-val">85%</span>
+                </div>
+                <div class="progress-bar" onclick="editSkill(this)">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span contenteditable="false">UI/UX Design</span>
+                    <span class="skill-val">90%</span>
+                </div>
+                <div class="progress-bar" onclick="editSkill(this)">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="sidebar-group">
+            <h2 class="sidebar-label"><i data-lucide="languages" size="16"></i> IDIOMAS</h2>
+            <div class="lang-list">
+                <div class="lang-item"><strong contenteditable="false">Español:</strong> <span contenteditable="false">Nativo</span></div>
+                <div class="lang-item"><strong contenteditable="false">Inglés:</strong> <span contenteditable="false">C1 - Avanzado</span></div>
+            </div>
+        </div>
+
+        <!-- Otros -->
+        <div class="sidebar-group">
+            <h2 class="sidebar-label"><i data-lucide="plus-circle" size="16"></i> OTROS</h2>
+            <div class="lang-list">
+                <div class="lang-item"><i data-lucide="car" size="14" style="margin-right:8px"></i> <span contenteditable="false">Carnet de conducir B</span></div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main>
+        <div id="cv-render">
+            <div class="bento-container">
+                
+                <!-- Perfil -->
+                <div class="bento-card full">
+                    <h2 contenteditable="false"><i data-lucide="user-circle"></i> Perfil Profesional</h2>
+                    <div class="card-body" contenteditable="false">
+                        Desarrollador Frontend apasionado por crear experiencias digitales excepcionales. Especializado en el ecosistema <strong>React/Next.js</strong>, con un enfoque meticuloso en la arquitectura de componentes y la optimización del rendimiento. Experto en transformar diseños complejos en código limpio, accesible y escalable.
+                    </div>
+                </div>
+
+                <!-- Experiencia -->
+                <div class="bento-card full">
+                    <h2 contenteditable="false"><i data-lucide="briefcase"></i> Experiencia Relevante</h2>
+                    <div class="card-body">
+                        <div class="experience-node">
+                            <h3 contenteditable="false">Frontend Lead Developer @ TechFlow</h3>
+                            <span class="date" contenteditable="false">Enero 2023 — Actualidad</span>
+                            <div contenteditable="false">
+                                <p>• Liderazgo técnico en la migración de un sistema legacy a Next.js 14.</p>
+                                <p>• Implementación de un Design System propio utilizado en 4 productos distintos.</p>
+                            </div>
+                        </div>
+                        <div class="experience-node" style="margin-bottom: 0;">
+                            <h3 contenteditable="false">Fullstack Developer @ CreativeCloud</h3>
+                            <span class="date" contenteditable="false">Marzo 2021 — Diciembre 2022</span>
+                            <div contenteditable="false">
+                                <p>• Desarrollo de dashboards interactivos con visualización de datos en tiempo real.</p>
+                                <p>• Integración de pasarelas de pago y sistemas de autenticación OAuth2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tecnologías -->
+                <div class="bento-card">
+                    <h2 contenteditable="false"><i data-lucide="code-2"></i> Tecnologías</h2>
+                    <div class="card-body">
+                        <div class="pills">
+                            <span class="pill" contenteditable="false">React</span>
+                            <span class="pill" contenteditable="false">TypeScript</span>
+                            <span class="pill" contenteditable="false">Next.js</span>
+                            <span class="pill" contenteditable="false">Tailwind CSS</span>
+                            <span class="pill" contenteditable="false">Node.js</span>
+                            <span class="pill" contenteditable="false">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyectos -->
+                <div class="bento-card">
+                    <h2 contenteditable="false"><i data-lucide="layers"></i> Proyectos Top</h2>
+                    <div class="card-body">
+                        <div style="margin-bottom: 8px;">
+                            <strong contenteditable="false">⚡️ FastShop Engine</strong>
+                            <p style="font-size: 11px; color: var(--text-light)" contenteditable="false">Motor e-commerce ultra ligero.</p>
+                        </div>
+                        <div>
+                            <strong contenteditable="false">📊 Analytics Pro</strong>
+                            <p style="font-size: 11px; color: var(--text-light)" contenteditable="false">SaaS de métricas para creadores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación -->
+                <div class="bento-card full">
+                    <h2 contenteditable="false"><i data-lucide="graduation-cap"></i> Formación</h2>
+                    <div class="card-body">
+                        <div class="experience-node" style="margin-bottom: 0;">
+                            <h3 contenteditable="false">Grado Superior en Desarrollo de Aplicaciones Web</h3>
+                            <span class="date" contenteditable="false">IES Tecnológico de Madrid · 2019 - 2021</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Toolbar -->
+<div class="toolbar">
+    <button class="tool-btn" id="edit-mode-btn" onclick="toggleEditMode()" title="Modo Edición">
+        <i data-lucide="edit-3"></i>
+    </button>
+    <button class="tool-btn" onclick="toggleTheme()" title="Cambiar Tema">
+        <i data-lucide="sun" id="theme-icon"></i>
+    </button>
+    <button class="tool-btn primary" onclick="prepareAndPrint()">
+        <i data-lucide="printer" size="18" style="margin-right: 8px;"></i>
+        Imprimir PDF
+    </button>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
